@@ -1,0 +1,213 @@
+body {
+    background-color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #eee;
+    text-align: center;
+    font-size: 16px;
+}
+
+h2 {
+    color: #eee;
+    text-align: center;
+    font-size: 16px;
+}
+
+h3 {
+    color: #eee;
+    text-align: center;
+    font-size: 14px;
+}
+
+p {
+    color: #eee;
+    text-align: center;
+    font-size: 14px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+      
+a {
+    color: #eee;
+}
+
+/* Hide the browser's default checkbox */
+.label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.row {
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+}
+
+/* container width sum of left-panel mid-panel btn-panel */
+.container {
+    width: 500px; 
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.left-panel {
+    float: left;
+    cursor: pointer;
+    width: 160px;
+}
+
+.mid-panel {
+    float: left;
+    width: 200px;;
+    cursor: none;
+    background-color:#111;
+}
+
+.btn-panel {
+    float: left;
+    width: 140px;;
+}
+
+.file-upload-panel {
+    float: left;
+    width: auto;
+}
+
+.section {
+    display: block;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: white;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #ddd;
+}
+
+/* On mouse-over, add a grey background color */
+.label:hover input ~ .checkmark {
+    background-color: #29F;
+}
+
+/* When the checkbox is checked, add a blue background */
+.label input:checked ~ .checkmark {
+    background-color: #29F;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.label input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.label .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.btn-reset {
+    display: block;
+    background-color: #3D5;
+    color: white;
+    padding: 3px 3px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    margin-top: 15px;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:30px;
+    opacity: 0.8;
+    font-size: 16px;
+}
+
+.btn-apply {
+    background-color: #D35;
+    color: white;
+    padding: 3px 3px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom:15px;
+    margin-right:20px;
+    opacity: 0.8;
+    font-size: 16px;
+}
+
+.btn-browse {
+    display: block;
+    color: white;
+    padding: 3px 3px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    font-size: 16px;
+}
+
+.btn-reset:hover {
+    background-color: #29F;
+}
+.btn-apply:hover {
+    background-color: #29F;
+}
+.btn-browse:hover {
+    background-color: #29F;
+}
+

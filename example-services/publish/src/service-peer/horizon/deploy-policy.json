@@ -1,0 +1,24 @@
+{
+    "label": "deploy-policy-service-peer-$ARCH",
+    "description": "A deploy policy for service-peer on $ARCH",
+    "service": {
+	"name": "$EDGE_OWNER.$EDGE_DEPLOY.service-peer",
+	"org": "$HZN_ORG_ID",
+	"arch": "$ARCH",
+	"serviceVersions": [
+	    {
+		"version": "1.0.0",
+		"priority":{}
+	    }
+	]
+    },
+    "properties": [
+    ],
+    "constraints": [
+	"owner == $EDGE_OWNER",
+	"deploy == $EDGE_DEPLOY",
+	"node-group == group-north"
+    ],
+    "userInput": [
+    ]
+}

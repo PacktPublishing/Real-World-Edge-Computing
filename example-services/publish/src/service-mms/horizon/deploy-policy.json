@@ -1,0 +1,24 @@
+{
+    "label": "deploy-policy-service-mms-$ARCH",
+    "description": "A deploy policy for service-mms on $ARCH",
+    "service": {
+	"name": "$EDGE_OWNER.$EDGE_DEPLOY.service-mms",
+	"org": "$HZN_ORG_ID",
+	"arch": "$ARCH",
+	"serviceVersions": [
+	    {
+		"version": "1.0.0",
+		"priority":{}
+	    }
+	]
+    },
+    "properties": [
+    ],
+    "constraints": [
+	"owner == $EDGE_OWNER",
+	"deploy == $EDGE_DEPLOY",
+	"node-mms == true"
+    ],
+    "userInput": [
+    ]
+}

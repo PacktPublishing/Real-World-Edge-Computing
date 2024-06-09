@@ -1,0 +1,42 @@
+{
+    "org": "$HZN_ORG_ID",
+    "label": "$SERVICE_NAME for $ARCH",
+    "description": "",
+    "public": true,
+    "documentation": "",
+    "url": "$SERVICE_NAME",
+    "version": "$SERVICE_VERSION",
+    "arch": "$ARCH",
+    "sharable": "singleton",
+    "requiredServices": [
+        { "url": "$EDGE_OWNER.$EDGE_DEPLOY.http", "org": "$HZN_ORG_ID", "version": "1.0.0", "versionRange": "1.0.0", "arch": "$ARCH" }
+    ],
+    "userInput": [
+	{ "name": "APP_MODEL_FMWK", "label": "app-model-fmwk-required", "type": "string", "defaultValue": "" },
+	{ "name": "APP_MODEL_DIR", "label": "app-model-sub-dir-required", "type": "string", "defaultValue": "" },
+	{ "name": "APP_ML_MODEL", "label": "app-model-required", "type": "string", "defaultValue": "" },
+	{ "name": "APP_VIDEO_FILES", "label": "optional-video-files", "type": "string", "defaultValue": "-" },
+	{ "name": "APP_RTSPS", "label": "optional-rtsp-streams", "type": "string", "defaultValue": "-" },
+	{ "name": "APP_CAMERAS", "label": "optional-camera-sources", "type": "string", "defaultValue": "all" },
+        { "name": "APP_VIEW_COLUMNS", "label": "view-column", "type": "int", "defaultValue": "1" },
+        { "name": "DEVICE_ID", "label": "device-id", "type": "string", "defaultValue": "DEVICE_ID" },
+        { "name": "DEVICE_NAME", "label": "device-name", "type": "string", "defaultValue": "DEVICE_NAME" },
+        { "name": "DEVICE_IP_ADDRESS", "label": "device-ip-address", "type": "string", "defaultValue": "DEVICE_IP_ADDRESS" },
+        { "name": "SHOW_OVERLAY", "label": "show-overlay", "type": "boolean", "defaultValue": "true" },
+        { "name": "PUBLISH_STREAM", "label": "publish-stream", "type": "boolean", "defaultValue": "true" },
+        { "name": "MIN_CONFIDENCE_THRESHOLD", "label": "min-confidence-threshold", "type": "float", "defaultValue": "0.6" },
+        { "name": "MMS_POLLING_INTERVAL", "label": "mms-polling-interval", "type": "int", "defaultValue": "10" },
+	{ "name": "HTTP_PUBLISH_STREAM_URL", "label": "http-publish-stream-url", "type": "string", "defaultValue": "http://$EDGE_OWNER.$EDGE_DEPLOY.http:5000/publish/stream" }
+    ],
+    "deployment": {
+        "services": {
+            "$SERVICE_NAME": {
+                "image": "${DOCKER_IMAGE_BASE}_$ARCH:$SERVICE_VERSION",
+                "privileged": true,
+		"binds": [
+		    "$APP_BIND_HORIZON_DIR:$APP_BIND_HORIZON_DIR:rw"
+                ]
+            }
+        }
+    }
+}

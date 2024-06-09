@@ -1,0 +1,23 @@
+{
+    "objectID": "test_mms.json",
+    "objectType": "testmms",
+    "destinationOrgID": "myorg",
+    "destinationPolicy": {
+	"properties": [],
+	"constraints": [
+	    "owner == rwec.edge",
+	    "deploy == example.service",
+	    "capability == basic",
+	    "node-group == group-east"
+	],
+	"services": [
+	    {
+		"orgID": "myorg",
+		"arch": "*",
+		"serviceName": "rwec.edge.example.service.service-mms",
+		"version": "[0.0.0,INFINITY)"
+	    }
+	]
+    },
+    "description": "test_mms_description"
+}

@@ -1,0 +1,28 @@
+{
+    "org": "$HZN_ORG_ID",
+    "label": "$SERVICE_NAME-$ARCH",
+    "url": "$SERVICE_NAME",
+    "version": "$SERVICE_VERSION",
+    "arch": "$ARCH",
+    "public": true,
+    "sharable": "singleton",
+    "requiredServices": [
+    ],
+    "userInput": [
+        { "name": "APP_VIEW_COLUMNS", "label": "view-column", "type": "int", "defaultValue": "1" }
+    ],
+    "deployment": {
+	"services": {
+	    "$SERVICE_NAME": {
+		"image": "${DOCKER_IMAGE_BASE}_$ARCH:$SERVICE_VERSION",
+		"ports": [
+		    {
+			"HostPort":"5000:5000:tcp",
+			"HostIP":"0.0.0.0"
+		    }
+		]
+	    }
+	}
+    }
+}
+

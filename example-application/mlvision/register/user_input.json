@@ -1,0 +1,41 @@
+{
+    "services": [
+    {
+	"org": "$HZN_ORG_ID",
+	"url": "$EDGE_OWNER.$EDGE_DEPLOY.http",
+	"versionRange": "[0.0.0,INFINITY)",
+	"variables": {
+	    "APP_VIEW_COLUMNS"         : $APP_VIEW_COLUMNS
+	}
+    },
+    {
+	"org": "$HZN_ORG_ID",
+	"url": "$EDGE_OWNER.$EDGE_DEPLOY.mms",
+	"versionRange": "[0.0.0,INFINITY)",
+	"variables": {
+	    "APP_BIND_HORIZON_DIR"     : "$APP_BIND_HORIZON_DIR"
+	}
+    },
+    {
+	"org": "$HZN_ORG_ID",
+	"url": "$EDGE_OWNER.$EDGE_DEPLOY.infer",
+	"versionRange": "[0.0.0,INFINITY)",
+	"variables": {
+	    "APP_MODEL_FMWK"           : "$APP_MODEL_FMWK",
+	    "APP_MODEL_DIR"            : "$APP_MODEL_DIR",
+	    "APP_ML_MODEL"             : "$APP_ML_MODEL",
+	    "APP_CAMERAS"              : "$APP_CAMERAS",
+	    "APP_VIDEO_FILES"          : "$APP_VIDEO_FILES",
+	    "APP_RTSPS"                : "$APP_RTSPS",
+	    "APP_VIEW_COLUMNS"         : $APP_VIEW_COLUMNS,
+            "DEVICE_ID"                : "$DEVICE_ID",
+            "DEVICE_NAME"              : "$DEVICE_NAME",
+	    "DEVICE_IP_ADDRESS"        : "$DEVICE_IP_ADDRESS",
+	    "SHOW_OVERLAY"             : $SHOW_OVERLAY,
+	    "PUBLISH_STREAM"           : $PUBLISH_STREAM,
+	    "MIN_CONFIDENCE_THRESHOLD" : $MIN_CONFIDENCE_THRESHOLD,
+	    "MMS_POLLING_INTERVAL"     : $MMS_POLLING_INTERVAL
+	}
+    }
+  ]
+}

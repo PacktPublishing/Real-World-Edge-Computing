@@ -1,0 +1,14 @@
+FROM alpine:latest
+RUN apk update \
+    && apk add --no-cache \
+    bash \
+    curl \
+    jq \
+    socat
+
+WORKDIR /
+
+COPY service/mms.sh /
+COPY service/service_mms.sh /
+
+CMD /mms.sh

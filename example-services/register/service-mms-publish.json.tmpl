@@ -1,0 +1,23 @@
+{
+    "objectID": "test_mms.json",
+    "objectType": "testmms",
+    "destinationOrgID": "$HZN_ORG_ID",
+    "destinationPolicy": {
+	"properties": [],
+	"constraints": [
+	    "owner == $EDGE_OWNER",
+	    "deploy == $EDGE_DEPLOY",
+	    "capability == basic",
+	    "node-group == group-east"
+	],
+	"services": [
+	    {
+		"orgID": "$HZN_ORG_ID",
+		"arch": "*",
+		"serviceName": "$EDGE_OWNER.$EDGE_DEPLOY.service-mms",
+		"version": "[0.0.0,INFINITY)"
+	    }
+	]
+    },
+    "description": "test_mms_description"
+}

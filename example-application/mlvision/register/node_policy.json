@@ -1,0 +1,11 @@
+{
+  "properties": [
+      { "name": "owner",  "value": "rwec.edge" },
+      { "name": "deploy",  "value": "example.mlvision" },
+      { "name": "mms", "value": true },
+      { "name": "infer", "value": true },
+      { "name": "openhorizon.allowPrivileged", "value": true }
+  ],
+  "constraints": [
+  ]
+}

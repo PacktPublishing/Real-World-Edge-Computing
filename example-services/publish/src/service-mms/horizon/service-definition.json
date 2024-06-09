@@ -1,0 +1,25 @@
+{
+    "org": "$HZN_ORG_ID",
+    "label": "$SERVICE_NAME-$ARCH",
+    "description": "Provides a MMS service",
+    "url": "$SERVICE_NAME",
+    "version": "$SERVICE_VERSION",
+    "arch": "$ARCH",
+    "public": true,
+    "sharable": "singleton",
+    "requiredServices": [],
+    "userInput": [],
+    "deployment": {
+	"services": {
+	    "$SERVICE_NAME": {
+		"image": "${DOCKER_IMAGE_BASE}_$ARCH:$SERVICE_VERSION",
+		"ports": [
+		    {
+			"HostPort":"7777:7777/tcp",
+			"HostIP":"0.0.0.0"
+		    }
+		]
+	    }
+	}
+    }
+}

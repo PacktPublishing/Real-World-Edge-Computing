@@ -1,0 +1,23 @@
+FROM python:3.10-slim
+
+RUN pip install flask requests
+
+WORKDIR /
+
+RUN mkdir static templates
+RUN mkdir -p static/css
+
+COPY service/static/test-image-0.png static/
+COPY service/static/test-image-0.jpg static/
+
+COPY service/static/css/style.css static/css/
+COPY service/templates/index.html templates/
+
+COPY service/templates/admin.html templates/
+COPY service/templates/stream.html templates/
+COPY service/templates/admin1.html templates/
+COPY service/templates/stream1.html templates/
+
+COPY service/server.py .
+
+CMD /usr/local/bin/python3 ./server.py

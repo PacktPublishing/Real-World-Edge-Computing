@@ -1,0 +1,41 @@
+FROM python:3.10-slim
+
+RUN apt-get update && apt-get --no-install-recommends -y install \
+    libjpeg-dev \
+    libtiff5-dev \
+    libavcodec-dev \
+    libavformat-dev \
+    libswscale-dev \
+    libv4l-dev \
+    libxvidcore-dev \
+    libx264-dev \
+    libgstreamer-plugins-base1.0-dev \
+    qtbase5-dev \
+    unzip \
+    wget 
+
+RUN pip install requests opencv-python==4.8.1.78
+RUN pip install tflite-runtime==2.13.0
+
+RUN rm -rf /var/lib/apt/lists/*
+
+WORKDIR /
+
+RUN mkdir -p package/detect/tflite package/util package/video 
+COPY service/package/detect/tflite/__init__.py package/detect/tflite/
+COPY service/package/detect/tflite/tfliteDetector.py package/detect/tflite/
+COPY service/package/detect/tflite/tfliteOpenCV.py package/detect/tflite/
+COPY service/package/detect/baseOpenCV.py package/detect/
+COPY service/package/video/__init__.py package/video/
+COPY service/package/video/videoSourceProcessor.py package/video/ 
+COPY service/package/video/videoSource.py package/video/
+COPY service/package/video/videoStream.py package/video/
+COPY service/package/util/util.py package/util/
+COPY service/package/__init__.py package/
+COPY service/package/config.py package/
+COPY service/videoObjectDetector.py .
+
+WORKDIR /
+CMD /usr/local/bin/python3 videoObjectDetector.py
+
+

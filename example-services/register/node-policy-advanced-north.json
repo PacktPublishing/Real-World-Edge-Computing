@@ -1,0 +1,11 @@
+{
+  "properties": [
+      { "name": "owner", "value": "rwec.edge" },
+      { "name": "deploy", "value": "example.service" },
+      { "name": "capability","value": "advanced" },
+      { "name": "node-group", "value": "group-north" },
+      { "name": "openhorizon.allowPrivileged", "value": true }
+  ],
+  "constraints": [
+  ]
+}

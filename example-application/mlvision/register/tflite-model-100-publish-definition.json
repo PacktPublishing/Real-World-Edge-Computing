@@ -1,0 +1,22 @@
+{
+    "objectID": "tflite-model-1.0.0-mms.zip",
+    "objectType": "mmsmodel",
+    "destinationOrgID": "$HZN_ORG_ID",
+    "destinationPolicy": {
+        "properties": [],
+        "constraints": [
+            "owner == $EDGE_OWNER",
+            "deploy == $EDGE_DEPLOY",
+            "infer == true"
+        ],
+        "services": [
+            {
+                "orgID": "$HZN_ORG_ID",
+                "arch": "*",
+                "serviceName": "$EDGE_OWNER.$EDGE_DEPLOY.mms",
+                "version": "[0.0.0,INFINITY)"
+            }
+        ]
+    },
+    "description": "{\"fmwk\":\"tflite\",\"net\":\"ssd_mobilenet_v1_1.0_quant\",\"dataset\":\"2018_06_29-coco\",\"version\":\"1.0.0\",\"format\":\"zip\",\"subdir\":\"ml/model/tflite\"}"
+}
