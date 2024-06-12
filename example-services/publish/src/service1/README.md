@@ -1,6 +1,6 @@
 # example-services
 
-Steps to buld, push, publish and deploy service on an Edge device node
+Steps to build, push, publish and deploy service on an Edge device node
 
 ## Service 1
 1. [Setup ENVIRONMENT variables](#1-setup-environment-variables)
