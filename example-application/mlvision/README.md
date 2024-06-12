@@ -1,5 +1,5 @@
 # Example Application
-Steps to buld, push, publish and deploy service on an Edge device node for MLVISION example application
+Steps to build, push, publish and deploy service on an Edge device node for MLVISION example application
 ## MLVISION
 1. Setup ENVIRONMENT variables
 2. Build and publish ML Vision application
