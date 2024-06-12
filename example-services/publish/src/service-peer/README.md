@@ -1,6 +1,6 @@
 # example-services
 
-Steps to buld, push, publish and deploy service on an Edge device node
+Steps to build, push, publish and deploy service on an Edge device node
 
 ## Service peer
 1. [Setup ENVIRONMENT variables](#1-setup-environment-variables)
@@ -38,7 +38,7 @@ source ~/project/rwec/ENV_RWEC
 ```
 
 ### 2. Publish Open Horizon service  
-#### 2.1 Change to Chapter 8 directory
+#### 2.1 Change to example-services directory
 ```
 cd example-services
 ```
