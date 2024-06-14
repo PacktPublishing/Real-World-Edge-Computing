@@ -43,11 +43,11 @@ With the following software and hardware list you can run all code files present
 | ------------------------------------ | ----------------------------------- |
 | Docker (or Podman or Kubernetes) | Linux |
 | Make | Linux |
-| bash | Linux |
+| Bash | Linux |
 | Linux Foundation’s LF Edge Open Horizon | Linux |
 | TensorFlow Lite (or PyTorch or OpenVino) | Linux |
 | OpenCV | Linux |
-| Python | Windows, macOS, or Linux |
+| Python | Linux |
 
 ## Related products
 * Edge Computing Patterns for Solution Architects [[Packt]](https://www.packtpub.com/product/edge-computing-patterns-for-solution-architects/9781805124061) [[Amazon]](https://a.co/d/24T8hDd)
