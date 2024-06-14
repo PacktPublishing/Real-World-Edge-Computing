@@ -1,6 +1,6 @@
 # Real-World Edge Computing
 
-<a href="https://www.packtpub.com/product/real-world-edge-computing/9781835885840"> <img src="	https://content.packt.com/_/image/original/B22368/cover_image_large.jpg" alt="Real-World Edge Computing" itemprop="url" height="256px" align="right"> </a>
+<a href="https://www.packtpub.com/product/real-world-edge-computing/9781835885840"> <img src="https://content.packt.com/_/image/original/B22368/cover_image_large.jpg" alt="Real-World Edge Computing" itemprop="url" height="256px" align="right"> </a>
 
 This is the code repository for [Real-World Edge Computing](https://www.packtpub.com/product/real-world-edge-computing/9781835885840), published by Packt.
 
